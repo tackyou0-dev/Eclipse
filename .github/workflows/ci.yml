@@ -1,0 +1,36 @@
+name: CI
+
+# Engine-free verification. Runs on every push and pull request.
+# The full Unreal build and the editor automation tests require UE 5.6 and run on a
+# dedicated runner (see BUILD.md); this workflow guarantees the deterministic logic and
+# structural rules stay correct everywhere.
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Structural C++ lint
+        run: python3 Tools/ci/lint_cpp.py
+
+      - name: Reference model tests
+        run: python3 -m unittest discover -s Tests/Reference -p "test_*.py" -v
+
+      - name: Validate vertical slice content
+        run: python3 Tools/ci/validate_content.py
+
+      - name: Validate agent role files
+        run: |
+          python3 scripts/generate_agents.py
+          test "$(ls .agents/agents/*.md | wc -l)" -eq 10

@@ -1,0 +1,77 @@
+{
+  "$schema": "eclipse.factions/1",
+  "comment": "The four named factions plus wildlife. Mirrors UEclipseFactionDefinition. Relationships should be symmetric: if A lists B as an enemy, B should list A as an enemy too. The validator checks this.",
+  "factions": [
+    {
+      "faction": "HelixCorporation",
+      "displayName": "Helix Corporation",
+      "description": "The colony's corporate sponsor. Ordered, well-equipped, and still keeping secrets about what happened 37 years ago.",
+      "enemies": ["IronWolves", "Ascendants"],
+      "allies": ["FreeColonists"],
+      "hostileThreshold": -200.0,
+      "friendlyThreshold": 200.0,
+      "alliedThreshold": 600.0,
+      "vendorPricing": [
+        { "category": "Weapon", "buyPriceMultiplier": 0.95, "sellPriceMultiplier": 0.5 },
+        { "category": "Technology", "buyPriceMultiplier": 0.9, "sellPriceMultiplier": 0.55 },
+        { "category": "Medical", "buyPriceMultiplier": 1.05, "sellPriceMultiplier": 0.45 }
+      ]
+    },
+    {
+      "faction": "FreeColonists",
+      "displayName": "Free Colonists",
+      "description": "Descendants of the original settlers. They know the basin and they trade fair, if you earn it.",
+      "enemies": ["IronWolves"],
+      "allies": ["HelixCorporation"],
+      "hostileThreshold": -200.0,
+      "friendlyThreshold": 150.0,
+      "alliedThreshold": 500.0,
+      "vendorPricing": [
+        { "category": "Consumable", "buyPriceMultiplier": 0.85, "sellPriceMultiplier": 0.55 },
+        { "category": "Resource", "buyPriceMultiplier": 0.9, "sellPriceMultiplier": 0.5 },
+        { "category": "Weapon", "buyPriceMultiplier": 1.1, "sellPriceMultiplier": 0.45 }
+      ]
+    },
+    {
+      "faction": "IronWolves",
+      "displayName": "Iron Wolves",
+      "description": "Militarised raiders who took the frozen plateau and never gave it back. They respect strength and nothing else.",
+      "enemies": ["HelixCorporation", "FreeColonists", "Ascendants"],
+      "allies": [],
+      "hostileThreshold": -400.0,
+      "friendlyThreshold": 300.0,
+      "alliedThreshold": 800.0,
+      "vendorPricing": [
+        { "category": "Ammunition", "buyPriceMultiplier": 0.8, "sellPriceMultiplier": 0.5 },
+        { "category": "Armor", "buyPriceMultiplier": 0.95, "sellPriceMultiplier": 0.5 },
+        { "category": "Medical", "buyPriceMultiplier": 1.2, "sellPriceMultiplier": 0.4 }
+      ]
+    },
+    {
+      "faction": "Ascendants",
+      "displayName": "The Ascendants",
+      "description": "A cult that reveres the alien ruins and the intelligence sleeping inside them. They are not entirely wrong.",
+      "enemies": ["HelixCorporation", "IronWolves"],
+      "allies": [],
+      "hostileThreshold": -300.0,
+      "friendlyThreshold": 250.0,
+      "alliedThreshold": 700.0,
+      "vendorPricing": [
+        { "category": "Artifact", "buyPriceMultiplier": 0.85, "sellPriceMultiplier": 0.6 },
+        { "category": "Technology", "buyPriceMultiplier": 1.05, "sellPriceMultiplier": 0.5 },
+        { "category": "Resource", "buyPriceMultiplier": 1.0, "sellPriceMultiplier": 0.45 }
+      ]
+    },
+    {
+      "faction": "Wildlife",
+      "displayName": "Basin Wildlife",
+      "description": "Mutated fauna. Not a faction in any diplomatic sense, but it occupies the same hostility space.",
+      "enemies": ["HelixCorporation", "FreeColonists", "IronWolves", "Ascendants"],
+      "allies": [],
+      "hostileThreshold": -1000.0,
+      "friendlyThreshold": 100000.0,
+      "alliedThreshold": 100001.0,
+      "vendorPricing": []
+    }
+  ]
+}

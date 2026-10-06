@@ -1,0 +1,160 @@
+{
+  "$schema": "eclipse.crafting/1",
+  "comment": "Vertical slice crafting recipes. Mirrors UEclipseRecipeDefinition. Ingredient item ids and output item ids must exist in items.json; RequiredStation must be a valid EEclipseBaseModule.",
+  "recipes": [
+    {
+      "recipeId": "Recipe.Medkit",
+      "displayName": "Field Medkit",
+      "category": "Medical",
+      "requiredStation": "None",
+      "requiredLevel": 1,
+      "requiredSkillId": "",
+      "craftTimeSeconds": 3.0,
+      "outputItemId": "Medical.Medkit",
+      "outputCount": 1,
+      "ingredients": [
+        { "itemId": "Resource.Polymer", "count": 2 },
+        { "itemId": "Resource.CrystalShard", "count": 1 }
+      ]
+    },
+    {
+      "recipeId": "Recipe.StimShot",
+      "displayName": "Stim Shot",
+      "category": "Medical",
+      "requiredStation": "MedicalBay",
+      "requiredLevel": 2,
+      "requiredSkillId": "Skill.FieldMedicine",
+      "craftTimeSeconds": 4.0,
+      "outputItemId": "Medical.StimShot",
+      "outputCount": 2,
+      "ingredients": [
+        { "itemId": "Resource.Polymer", "count": 3 },
+        { "itemId": "Resource.CrystalShard", "count": 1 }
+      ]
+    },
+    {
+      "recipeId": "Recipe.Ammo556",
+      "displayName": "5.56mm Magazine",
+      "category": "Ammunition",
+      "requiredStation": "Workshop",
+      "requiredLevel": 1,
+      "requiredSkillId": "",
+      "craftTimeSeconds": 2.0,
+      "outputItemId": "Ammo.556",
+      "outputCount": 60,
+      "ingredients": [
+        { "itemId": "Resource.ScrapMetal", "count": 2 }
+      ]
+    },
+    {
+      "recipeId": "Recipe.Ammo338",
+      "displayName": ".338 Sniper Rounds",
+      "category": "Ammunition",
+      "requiredStation": "Workshop",
+      "requiredLevel": 3,
+      "requiredSkillId": "",
+      "craftTimeSeconds": 3.0,
+      "outputItemId": "Ammo.338",
+      "outputCount": 15,
+      "ingredients": [
+        { "itemId": "Resource.ScrapMetal", "count": 3 },
+        { "itemId": "Resource.Circuitry", "count": 1 }
+      ]
+    },
+    {
+      "recipeId": "Recipe.PowerCell",
+      "displayName": "Power Cell",
+      "category": "Technology",
+      "requiredStation": "Workshop",
+      "requiredLevel": 3,
+      "requiredSkillId": "Skill.PowerSystems",
+      "craftTimeSeconds": 6.0,
+      "outputItemId": "Technology.PowerCell",
+      "outputCount": 1,
+      "ingredients": [
+        { "itemId": "Resource.Circuitry", "count": 3 },
+        { "itemId": "Resource.CrystalShard", "count": 2 },
+        { "itemId": "Resource.ScrapMetal", "count": 2 }
+      ]
+    },
+    {
+      "recipeId": "Recipe.AttachmentSuppressor",
+      "displayName": "Suppressor",
+      "category": "Weapon",
+      "requiredStation": "Armory",
+      "requiredLevel": 4,
+      "requiredSkillId": "Skill.WeaponSmithing",
+      "craftTimeSeconds": 12.0,
+      "outputItemId": "Attachment.Muzzle.Suppressor",
+      "outputCount": 1,
+      "ingredients": [
+        { "itemId": "Resource.ScrapMetal", "count": 8 },
+        { "itemId": "Resource.Polymer", "count": 4 },
+        { "itemId": "Technology.PowerCell", "count": 1 }
+      ]
+    },
+    {
+      "recipeId": "Recipe.AttachmentScope4x",
+      "displayName": "4x Combat Scope",
+      "category": "Weapon",
+      "requiredStation": "Armory",
+      "requiredLevel": 4,
+      "requiredSkillId": "Skill.Optics",
+      "craftTimeSeconds": 14.0,
+      "outputItemId": "Attachment.Optic.Scope4x",
+      "outputCount": 1,
+      "ingredients": [
+        { "itemId": "Resource.Circuitry", "count": 6 },
+        { "itemId": "Resource.Polymer", "count": 3 },
+        { "itemId": "Resource.CrystalShard", "count": 2 }
+      ]
+    },
+    {
+      "recipeId": "Recipe.CompositeVest",
+      "displayName": "Composite Vest",
+      "category": "Armor",
+      "requiredStation": "Armory",
+      "requiredLevel": 3,
+      "requiredSkillId": "",
+      "craftTimeSeconds": 18.0,
+      "outputItemId": "Armor.CompositeVest",
+      "outputCount": 1,
+      "ingredients": [
+        { "itemId": "Resource.ScrapMetal", "count": 10 },
+        { "itemId": "Resource.Polymer", "count": 8 }
+      ]
+    },
+    {
+      "recipeId": "Recipe.HazmatSuit",
+      "displayName": "Hazmat Suit",
+      "category": "Armor",
+      "requiredStation": "Laboratory",
+      "requiredLevel": 5,
+      "requiredSkillId": "Skill.HazardProtection",
+      "craftTimeSeconds": 24.0,
+      "outputItemId": "Armor.HazmatSuit",
+      "outputCount": 1,
+      "ingredients": [
+        { "itemId": "Resource.Polymer", "count": 12 },
+        { "itemId": "Resource.Circuitry", "count": 6 },
+        { "itemId": "Resource.CrystalShard", "count": 4 }
+      ]
+    },
+    {
+      "recipeId": "Recipe.RelayModule",
+      "displayName": "Relay Module",
+      "category": "Technology",
+      "requiredStation": "Laboratory",
+      "requiredLevel": 5,
+      "requiredSkillId": "Skill.SignalEngineering",
+      "craftTimeSeconds": 30.0,
+      "outputItemId": "Technology.RelayModule",
+      "outputCount": 1,
+      "ingredients": [
+        { "itemId": "Resource.Circuitry", "count": 10 },
+        { "itemId": "Technology.PowerCell", "count": 3 },
+        { "itemId": "Resource.CrystalShard", "count": 5 }
+      ]
+    }
+  ]
+}

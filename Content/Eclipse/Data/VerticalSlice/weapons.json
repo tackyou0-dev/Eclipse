@@ -1,0 +1,208 @@
+{
+  "$schema": "eclipse.weapons/1",
+  "comment": "Vertical slice weapon roster for THE FALLEN BASIN. Mirrors UEclipseWeaponDefinition and FEclipseWeaponAttachment. Stats are the base profile; attachments modify them at runtime through ApplyStat. Import into /Game/Eclipse/Data/Weapons.",
+  "weapons": [
+    {
+      "weaponId": "AR-01",
+      "displayName": "AR-01 Assault Rifle",
+      "description": "Standard-issue Helix rifle. Balanced, forgiving, the baseline everything else is measured against.",
+      "fireMode": "Auto",
+      "deliveryMode": "Hitscan",
+      "damage": 30.0,
+      "damageType": "Physical",
+      "spreadDegrees": 1.5,
+      "recoilVertical": 1.0,
+      "recoilHorizontal": 0.5,
+      "effectiveRange": 8000.0,
+      "maxRange": 20000.0,
+      "roundsPerMinute": 600.0,
+      "reloadSeconds": 2.2,
+      "magazineCapacity": 30,
+      "weight": 3.5,
+      "noiseRadius": 3000.0,
+      "aimDownSightsSeconds": 0.25,
+      "aimSpreadMultiplier": 0.4,
+      "armorPenetration": 0.15,
+      "burstCount": 3,
+      "rarity": "Common",
+      "ammoItemId": "Ammo.556",
+      "availableSlots": ["Barrel", "Magazine", "Optic", "Muzzle", "Stock", "Grip"],
+      "muzzleSocketName": "Muzzle"
+    },
+    {
+      "weaponId": "VX-9",
+      "displayName": "VX-9 SMG",
+      "description": "Close-quarters submachine gun. Fast, light, punishing recoil beyond ten metres.",
+      "fireMode": "Auto",
+      "deliveryMode": "Hitscan",
+      "damage": 18.0,
+      "damageType": "Physical",
+      "spreadDegrees": 2.6,
+      "recoilVertical": 1.35,
+      "recoilHorizontal": 0.85,
+      "effectiveRange": 3500.0,
+      "maxRange": 12000.0,
+      "roundsPerMinute": 900.0,
+      "reloadSeconds": 1.7,
+      "magazineCapacity": 40,
+      "weight": 2.4,
+      "noiseRadius": 2600.0,
+      "aimDownSightsSeconds": 0.18,
+      "aimSpreadMultiplier": 0.55,
+      "armorPenetration": 0.08,
+      "burstCount": 3,
+      "rarity": "Common",
+      "ammoItemId": "Ammo.9mm",
+      "availableSlots": ["Barrel", "Magazine", "Optic", "Muzzle", "Stock", "Grip"],
+      "muzzleSocketName": "Muzzle"
+    },
+    {
+      "weaponId": "M-12",
+      "displayName": "M-12 Shotgun",
+      "description": "Eight-pellet pump shotgun. Devastating inside five metres, useless outside fifteen.",
+      "fireMode": "Single",
+      "deliveryMode": "Projectile",
+      "damage": 14.0,
+      "damageType": "Kinetic",
+      "spreadDegrees": 6.5,
+      "recoilVertical": 3.2,
+      "recoilHorizontal": 1.1,
+      "effectiveRange": 1200.0,
+      "maxRange": 6000.0,
+      "roundsPerMinute": 75.0,
+      "reloadSeconds": 3.4,
+      "magazineCapacity": 8,
+      "weight": 4.6,
+      "noiseRadius": 4200.0,
+      "aimDownSightsSeconds": 0.32,
+      "aimSpreadMultiplier": 0.75,
+      "armorPenetration": 0.0,
+      "burstCount": 1,
+      "rarity": "Uncommon",
+      "ammoItemId": "Ammo.Shell",
+      "availableSlots": ["Barrel", "Magazine", "Optic", "Muzzle", "Stock"],
+      "muzzleSocketName": "Muzzle",
+      "pelletCount": 8
+    },
+    {
+      "weaponId": "SR-77",
+      "displayName": "SR-77 Sniper",
+      "description": "Bolt-action anti-materiel rifle. One shot, one kill, and everyone heard it.",
+      "fireMode": "Single",
+      "deliveryMode": "Hitscan",
+      "damage": 140.0,
+      "damageType": "Kinetic",
+      "spreadDegrees": 0.12,
+      "recoilVertical": 4.5,
+      "recoilHorizontal": 0.6,
+      "effectiveRange": 30000.0,
+      "maxRange": 60000.0,
+      "roundsPerMinute": 45.0,
+      "reloadSeconds": 3.0,
+      "magazineCapacity": 5,
+      "weight": 6.2,
+      "noiseRadius": 9000.0,
+      "aimDownSightsSeconds": 0.45,
+      "aimSpreadMultiplier": 0.05,
+      "armorPenetration": 0.85,
+      "burstCount": 1,
+      "rarity": "Rare",
+      "ammoItemId": "Ammo.338",
+      "availableSlots": ["Barrel", "Magazine", "Optic", "Muzzle", "Stock", "Grip"],
+      "muzzleSocketName": "Muzzle"
+    }
+  ],
+  "attachments": [
+    {
+      "attachmentId": "Barrel.Long",
+      "displayName": "Extended Barrel",
+      "slot": "Barrel",
+      "rarity": "Uncommon",
+      "modifiers": { "EffectiveRange": 1.25, "MaxRange": 1.2, "SpreadDegrees": 0.9, "AimDownSightsSeconds": 1.15, "Weight": 1.12 }
+    },
+    {
+      "attachmentId": "Barrel.Short",
+      "displayName": "CQB Barrel",
+      "slot": "Barrel",
+      "rarity": "Common",
+      "modifiers": { "EffectiveRange": 0.8, "SpreadDegrees": 0.85, "AimDownSightsSeconds": 0.85, "Weight": 0.9, "NoiseRadius": 0.92 }
+    },
+    {
+      "attachmentId": "Magazine.Extended",
+      "displayName": "Extended Magazine",
+      "slot": "Magazine",
+      "rarity": "Uncommon",
+      "modifiers": { "MagazineCapacity": 1.5, "ReloadSeconds": 1.25, "Weight": 1.15 }
+    },
+    {
+      "attachmentId": "Magazine.Quick",
+      "displayName": "Quick-Release Magazine",
+      "slot": "Magazine",
+      "rarity": "Rare",
+      "modifiers": { "ReloadSeconds": 0.72, "Weight": 1.05 }
+    },
+    {
+      "attachmentId": "Optic.Scope4x",
+      "displayName": "4x Combat Scope",
+      "slot": "Optic",
+      "rarity": "Rare",
+      "modifiers": { "SpreadDegrees": 0.6, "AimDownSightsSeconds": 1.3, "Weight": 1.2 }
+    },
+    {
+      "attachmentId": "Optic.Holo",
+      "displayName": "Holographic Sight",
+      "slot": "Optic",
+      "rarity": "Uncommon",
+      "modifiers": { "SpreadDegrees": 0.75, "AimDownSightsSeconds": 1.05, "Weight": 1.08 }
+    },
+    {
+      "attachmentId": "Muzzle.Suppressor",
+      "displayName": "Suppressor",
+      "slot": "Muzzle",
+      "rarity": "Rare",
+      "modifiers": { "NoiseRadius": 0.35, "Damage": 0.94, "RecoilVertical": 0.88 }
+    },
+    {
+      "attachmentId": "Muzzle.Compensator",
+      "displayName": "Compensator",
+      "slot": "Muzzle",
+      "rarity": "Uncommon",
+      "modifiers": { "RecoilVertical": 0.78, "RecoilHorizontal": 0.8, "NoiseRadius": 1.1 }
+    },
+    {
+      "attachmentId": "Stock.Heavy",
+      "displayName": "Heavy Stock",
+      "slot": "Stock",
+      "rarity": "Uncommon",
+      "modifiers": { "RecoilVertical": 0.75, "RecoilHorizontal": 0.8, "AimDownSightsSeconds": 1.12, "Weight": 1.18 }
+    },
+    {
+      "attachmentId": "Stock.Light",
+      "displayName": "Skeleton Stock",
+      "slot": "Stock",
+      "rarity": "Common",
+      "modifiers": { "Weight": 0.82, "AimDownSightsSeconds": 0.88, "RecoilVertical": 1.12 }
+    },
+    {
+      "attachmentId": "Grip.Angled",
+      "displayName": "Angled Foregrip",
+      "slot": "Grip",
+      "rarity": "Common",
+      "modifiers": { "RecoilHorizontal": 0.82, "SpreadDegrees": 0.92, "Weight": 1.06 }
+    },
+    {
+      "attachmentId": "Grip.Vertical",
+      "displayName": "Vertical Foregrip",
+      "slot": "Grip",
+      "rarity": "Uncommon",
+      "modifiers": { "RecoilVertical": 0.85, "SpreadDegrees": 0.88, "Weight": 1.1 }
+    },
+    {
+      "attachmentId": "PowerCore.Overcharge",
+      "displayName": "Overcharge Core",
+      "slot": "PowerCore",
+      "rarity": "Epic",
+      "modifiers": { "Damage": 1.2, "RoundsPerMinute": 1.1, "HeatPerShot": 1.5 }
+    }
+  ]
+}

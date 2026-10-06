@@ -1,0 +1,103 @@
+{
+  "$schema": "eclipse.missions/1",
+  "comment": "Vertical slice mission chain for THE FALLEN BASIN. Mirrors UEclipseMissionDefinition. Objectives reference objective types, item ids and factions that exist elsewhere in this data set. The chain ends at The Warden, which culminates in the WARDEN PRIME boss fight.",
+  "missions": [
+    {
+      "missionId": "Mission.FirstContact",
+      "displayName": "First Contact",
+      "briefing": "Your drop pod is down and the colony is silent. Get your bearings, make contact with the Free Colonists, and prove you can survive the basin.",
+      "missionType": "MainMission",
+      "offeringFaction": "FreeColonists",
+      "minimumLevel": 1,
+      "minimumReputation": -1000.0,
+      "requiredBiome": "None",
+      "hasTimeWindow": false,
+      "requiredWeather": [],
+      "timeLimitSeconds": 0.0,
+      "objectives": [
+        { "type": "ReachLocation", "description": "Reach the Free Colonist camp", "requiredCount": 1, "radius": 900.0, "mustBeLast": false },
+        { "type": "KillEnemies", "description": "Clear the drones around the camp", "requiredCount": 4, "radius": 0.0, "mustBeLast": false },
+        { "type": "Interact", "description": "Speak with the camp quartermaster", "requiredCount": 1, "radius": 400.0, "mustBeLast": true }
+      ],
+      "rewards": { "credits": 250, "experience": 400, "items": ["Medical.Medkit", "Ammo.556"] }
+    },
+    {
+      "missionId": "Mission.LostConvoy",
+      "displayName": "Lost Convoy",
+      "briefing": "A Helix supply convoy vanished on the eastern road. Find the wreck, recover the black box, and bring back what you can carry.",
+      "missionType": "Search",
+      "offeringFaction": "HelixCorporation",
+      "minimumLevel": 2,
+      "minimumReputation": -500.0,
+      "requiredBiome": "DesertExpanse",
+      "hasTimeWindow": false,
+      "requiredWeather": [],
+      "timeLimitSeconds": 0.0,
+      "objectives": [
+        { "type": "ReachLocation", "description": "Find the convoy wreck", "requiredCount": 1, "radius": 1200.0, "mustBeLast": false },
+        { "type": "CollectItems", "description": "Recover the convoy black box", "requiredCount": 1, "targetItemId": "Quest.ConvoyBlackBox", "radius": 0.0, "mustBeLast": false },
+        { "type": "KillEnemies", "description": "Drive off the scavengers", "requiredCount": 6, "radius": 0.0, "mustBeLast": true }
+      ],
+      "rewards": { "credits": 450, "experience": 700, "items": ["Technology.PowerCell", "Ammo.9mm"] }
+    },
+    {
+      "missionId": "Mission.BlackSignal",
+      "displayName": "Black Signal",
+      "briefing": "Something is broadcasting from the orbital crash zone. The signal only resolves during an electromagnetic storm. Go in, find the source, and stay alive.",
+      "missionType": "Search",
+      "offeringFaction": "Ascendants",
+      "minimumLevel": 3,
+      "minimumReputation": -1000.0,
+      "requiredBiome": "OrbitalCrashZone",
+      "hasTimeWindow": false,
+      "requiredWeather": ["ElectromagneticStorm"],
+      "timeLimitSeconds": 0.0,
+      "objectives": [
+        { "type": "ReachLocation", "description": "Reach the crash zone transmitter", "requiredCount": 1, "radius": 800.0, "mustBeLast": false },
+        { "type": "Survive", "description": "Hold position while the signal resolves", "requiredCount": 1, "durationSeconds": 90.0, "radius": 0.0, "mustBeLast": false },
+        { "type": "KillEnemies", "description": "Destroy the guardian drones", "requiredCount": 5, "radius": 0.0, "mustBeLast": true }
+      ],
+      "rewards": { "credits": 700, "experience": 1100, "items": ["Technology.RelayModule", "Artifact.AlienRelic"] }
+    },
+    {
+      "missionId": "Mission.BrokenRelay",
+      "displayName": "Broken Relay",
+      "briefing": "The colony relay network has been dark for 37 years. Bring a relay module to the tower on the frozen plateau and restore the link. The Iron Wolves want the tower for themselves.",
+      "missionType": "Sabotage",
+      "offeringFaction": "FreeColonists",
+      "minimumLevel": 4,
+      "minimumReputation": 0.0,
+      "requiredBiome": "FrozenPlateau",
+      "hasTimeWindow": true,
+      "timeWindowStartHour": 6.0,
+      "timeWindowEndHour": 20.0,
+      "requiredWeather": [],
+      "timeLimitSeconds": 900.0,
+      "objectives": [
+        { "type": "ReachLocation", "description": "Reach the relay tower", "requiredCount": 1, "radius": 700.0, "mustBeLast": false },
+        { "type": "Interact", "description": "Install the relay module", "requiredCount": 1, "radius": 300.0, "mustBeLast": false },
+        { "type": "Survive", "description": "Defend the tower until the link is stable", "requiredCount": 1, "durationSeconds": 180.0, "radius": 0.0, "mustBeLast": true }
+      ],
+      "rewards": { "credits": 1000, "experience": 1600, "items": ["Armor.HazmatSuit", "Technology.PowerCell", "Medical.StimShot"] }
+    },
+    {
+      "missionId": "Mission.TheWarden",
+      "displayName": "The Warden",
+      "briefing": "The black signal was a containment beacon, and you have just answered it. WARDEN PRIME is awake. Descend into the arena, break its four phases, and end the colony's long silence.",
+      "missionType": "MainMission",
+      "offeringFaction": "Ascendants",
+      "minimumLevel": 5,
+      "minimumReputation": 0.0,
+      "requiredBiome": "UndergroundComplex",
+      "hasTimeWindow": false,
+      "requiredWeather": [],
+      "timeLimitSeconds": 0.0,
+      "objectives": [
+        { "type": "ReachLocation", "description": "Enter the Warden containment arena", "requiredCount": 1, "radius": 900.0, "mustBeLast": false },
+        { "type": "KillEnemies", "description": "Defeat WARDEN PRIME", "requiredCount": 1, "radius": 0.0, "mustBeLast": false },
+        { "type": "Extract", "description": "Reach the extraction zone with the Warden key", "requiredCount": 1, "targetItemId": "Quest.WardenKey", "radius": 600.0, "mustBeLast": true }
+      ],
+      "rewards": { "credits": 3000, "experience": 5000, "items": ["Attachment.PowerCore.Overcharge", "Artifact.AlienRelic"] }
+    }
+  ]
+}
