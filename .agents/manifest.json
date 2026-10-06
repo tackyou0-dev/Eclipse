@@ -1,0 +1,82 @@
+{
+  "project": "PROJECT ECLIPSE",
+  "generated_at": "2026-10-06T14:52:16Z",
+  "agent_count": 10,
+  "agents": [
+    {
+      "id": "01-game-director",
+      "file": ".agents/agents/01-game-director.md",
+      "sha256": "725afe2526d3acb8472ead00954065a691d7a024b80166f7de6769b6f76357d5",
+      "bytes": 1653,
+      "missing_owned_paths": [
+        "README.md, ROADMAP.md, GAMEPLAY.md",
+        "Documentation/DECISIONS.md"
+      ]
+    },
+    {
+      "id": "02-lead-gameplay-engineer",
+      "file": ".agents/agents/02-lead-gameplay-engineer.md",
+      "sha256": "5843b0c6f110f2cebd23c0e62d697ff371f5a860a02701742332b198896a1b2e",
+      "bytes": 1568,
+      "missing_owned_paths": []
+    },
+    {
+      "id": "03-combat-weapons-engineer",
+      "file": ".agents/agents/03-combat-weapons-engineer.md",
+      "sha256": "ca3489357f7ee7304020404318101c6ada2aabc6992a2b490c6e3d068b67124d",
+      "bytes": 1613,
+      "missing_owned_paths": []
+    },
+    {
+      "id": "04-ai-encounter-engineer",
+      "file": ".agents/agents/04-ai-encounter-engineer.md",
+      "sha256": "a8abd0a4fc4e9289658fb5ca8accd09346c76101b9ac854f9efd49fdf954590d",
+      "bytes": 1592,
+      "missing_owned_paths": []
+    },
+    {
+      "id": "05-world-procedural-engineer",
+      "file": ".agents/agents/05-world-procedural-engineer.md",
+      "sha256": "4026b6215884d80a7c62ea214b66774ac8391cc4c6971767a368df800509b0fa",
+      "bytes": 1496,
+      "missing_owned_paths": []
+    },
+    {
+      "id": "06-systems-economy-engineer",
+      "file": ".agents/agents/06-systems-economy-engineer.md",
+      "sha256": "4c0fc280f4b58aebd97254eb1231f618bc4f01c58d58a6045ce947e0fbca2f50",
+      "bytes": 1561,
+      "missing_owned_paths": []
+    },
+    {
+      "id": "07-multiplayer-security-engineer",
+      "file": ".agents/agents/07-multiplayer-security-engineer.md",
+      "sha256": "0835c7ff7eb4bdcb5ed448cb9b6b034275fea6d616d1d06a85c5fe9996f4b8a3",
+      "bytes": 1524,
+      "missing_owned_paths": []
+    },
+    {
+      "id": "08-presentation-engineer",
+      "file": ".agents/agents/08-presentation-engineer.md",
+      "sha256": "d800d789e83c69d0124388e401632f8d5ff7d6c04276cb6fabfb8e2ea27c6d4f",
+      "bytes": 1550,
+      "missing_owned_paths": []
+    },
+    {
+      "id": "09-tools-build-engineer",
+      "file": ".agents/agents/09-tools-build-engineer.md",
+      "sha256": "cf39b970d659b0dbc08fd7c436167ee41c94fce0b870adfd4c42e1a046b7a89a",
+      "bytes": 1439,
+      "missing_owned_paths": []
+    },
+    {
+      "id": "10-qa-security-reviewer",
+      "file": ".agents/agents/10-qa-security-reviewer.md",
+      "sha256": "f6a0367b214620764e777bfceaf443fbdd3d2793266c9d912d92fc684de645c4",
+      "bytes": 1467,
+      "missing_owned_paths": [
+        "TESTING.md"
+      ]
+    }
+  ]
+}

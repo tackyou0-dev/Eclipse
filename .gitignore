@@ -1,0 +1,55 @@
+# PROJECT ECLIPSE - Unreal Engine .gitignore.
+# Generated content, build artefacts and IDE files are excluded. Source, Config and
+# data assets (uasset/umap) are committed.
+
+# --- Unreal build output ---
+Binaries/
+Build/
+DerivedDataCache/
+Intermediate/
+Saved/
+.vs/
+*.VC.db
+*.opensdf
+*.opendb
+*.sdf
+*.sln
+*.suo
+*.xcodeproj/
+*.xcworkspace/
+
+# --- Unreal generated ---
+*.generated.h
+*.gen.cpp
+*.stamp
+
+# --- Editor / IDE ---
+.idea/
+.vscode/
+*.code-workspace
+
+# --- Compiled binaries and archives ---
+*.dll
+*.exe
+*.lib
+*.pdb
+*.obj
+*.o
+*.so
+*.dylib
+*.a
+*.zip
+
+# --- Python (tools, tests, reference model) ---
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# --- OS noise ---
+.DS_Store
+Thumbs.db
+
+# --- Local agent scratch space ---
+.agent_tmp/
