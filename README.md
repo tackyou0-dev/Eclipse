@@ -79,9 +79,9 @@ run in the editor and assert the same arithmetic against the C++ implementation.
 ## How the project is run
 
 The work is organised as ten specialist agents, each with a written brief in
-`.agents/agents`. `AGENTS.md` is the contract they all follow; `Documentation/AGENTS.md`
-carries the long-form version, and `Documentation/DECISIONS.md` records why the architecture
-looks the way it does.
+`.agents/agents`. `AGENTS.md` is the working contract; `ARCHITECTURE.md` describes the
+module boundaries and system contracts. The briefs and their manifest are generated and
+checked by the scripts below.
 
 ```bash
 python3 scripts/generate_agents.py      # regenerate the ten role files
@@ -92,16 +92,11 @@ python3 scripts/deploy_subagents.py     # verify the briefs and write the manife
 
 | Document | Contents |
 | --- | --- |
-| `AGENTS.md` | The rules every agent follows, and the definition of done |
+| `AGENTS.md` | Working rules, review checklist and definition of done |
 | `ARCHITECTURE.md` | Module layout, system contracts, authority and determinism |
-| `GAMEPLAY.md` | The slice's loop, systems and tuning numbers |
-| `AI.md` | Tiering, squads, spawning, the Warden |
-| `NETWORKING.md` | Replication model, session flow, validation |
-| `BUILD.md` | Building, packaging, dedicated server |
-| `TESTING.md` | Test layers and the divergence policy |
-| `PERFORMANCE.md` | Budgets and the systems that defend them |
-| `PUBLISHING.md` | Release checklist and the credential requirements |
-| `ROADMAP.md` | What ships in the slice, and what comes after |
+| `AI.md` | AI tiers, squads, spawning and the Warden encounter |
+| `BUILD.md` | Build targets, packaging and dedicated-server guidance |
+| `Content/Eclipse/Data/VerticalSlice/README.md` | Content data schemas, validation and authoring rules |
 
 ## Licence
 

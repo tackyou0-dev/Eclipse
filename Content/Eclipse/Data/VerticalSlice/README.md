@@ -9,8 +9,9 @@ before anyone opens the editor.
 
 Binary `.uasset` files cannot be diffed, reviewed or validated without the engine. This
 JSON layer gives the team reviewable, version-controlled balance that CI can check against
-the actual enums parsed from `Source/Eclipse/Core/EclipseTypes.h`. A small importer (to be
-added in Phase 18) converts these into data assets in `/Game/Eclipse/Data/`.
+the actual enums parsed from the public C++ headers under `Source/Eclipse/Public/`. The
+in-editor importer at `Tools/editor/import_vertical_slice.py` converts these into data assets
+under `/Game/Eclipse/Data/`; run it from Unreal Editor after the module is built.
 
 ## Files
 

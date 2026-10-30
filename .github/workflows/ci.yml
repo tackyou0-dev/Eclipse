@@ -7,8 +7,9 @@ name: CI
 
 on:
   push:
-    branches: [master, main]
+    branches: ["**"]
   pull_request:
+  workflow_dispatch:
 
 jobs:
   verify:
@@ -30,7 +31,7 @@ jobs:
       - name: Validate vertical slice content
         run: python3 Tools/ci/validate_content.py
 
-      - name: Validate agent role files
+      - name: Check generated agent role files and manifest
         run: |
-          python3 scripts/generate_agents.py
-          test "$(ls .agents/agents/*.md | wc -l)" -eq 10
+          python3 scripts/generate_agents.py --check
+          python3 scripts/deploy_subagents.py --check

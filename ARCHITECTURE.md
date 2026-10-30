@@ -127,7 +127,8 @@ Everything that ticks has a reason and a frequency:
 | UI subsystem | every frame | notification expiry, craft progress |
 | Health component | self-disabling | shield regen stops when full |
 
-See `PERFORMANCE.md` for the budgets these exist to protect.
+These frequencies are the current tick policy; profile changes under representative multiplayer
+loads and keep per-frame work bounded when modifying these systems.
 
 ## Extension points
 
