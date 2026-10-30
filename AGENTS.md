@@ -1,9 +1,8 @@
 # AGENTS.md - how work is done on PROJECT ECLIPSE
 
 This file is the contract for every agent (human or automated) working in this repository.
-It is deliberately short and absolute: the long-form explanations live in
-`Documentation/AGENTS.md`, and every rule here has a reason recorded there or in
-`Documentation/DECISIONS.md`.
+The system boundaries and build guidance live in `ARCHITECTURE.md` and `BUILD.md`; decisions
+that affect those contracts should be recorded in the relevant document when they are made.
 
 ## The five rules
 
@@ -42,7 +41,7 @@ A change is done when all of the following are true:
 - New public headers carry a comment block that explains **why** the type exists and who is
   allowed to call it.
 - New delegates are broadcast where the state changes, not polled from `Tick`.
-- Anything that runs per frame is inside a budget (see `PERFORMANCE.md`).
+- Anything that runs per frame has an explicit cost rationale and a bounded workload.
 - The agent's own brief lists the path: if a role owns a directory, the file lives there.
 
 ## Review checklist
